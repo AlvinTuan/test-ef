@@ -8,7 +8,6 @@ import TestBar from "@/app/components/test-bar/test-bar";
 export default function Home() {
     return (
         <>
-            <TestBar></TestBar>
             <SectionOne></SectionOne>
             <SectionTwo></SectionTwo>
             <SectionThree></SectionThree>
