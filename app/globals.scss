@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    img {
+        vertical-align: middle;
+    }
+    a {
+        cursor: pointer;
+    }
+    p {
+        max-width: 760px;
+    }
+    body {
+        min-height: 100vh;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+        font-family: "Raleway", sans-serif;
+    }
+}
+
+@layer components {
+    .ct-icon {
+        @apply w-4 h-4;
+    }
+    .header {
+        width: 100%;
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        position: static;
+        z-index: 9;
+        color: rgba(0, 0, 0, 0.87);
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        border-bottom: solid 0.5px #979797;
+        background-color: #fff;
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    // content
+    .section-one,
+    .section-two,
+    .section-three,
+    .section-four,
+    .section-five,
+    .section-six,
+    .reason-section,
+    .particle-section-about {
+        @apply w-full relative;
+    }
+    .section-one,
+    .bgColorGreen {
+        background: linear-gradient(to top, #52e8a0 0%, #1acce5 100%);
+    }
+    .section-five {
+        background: linear-gradient(-135deg, #fe1c80, #0310ea 100%);
+    }
+    .h1-title {
+        font-size: clamp(2rem, 1.5455rem + 1.9394vw, 3rem);
+    }
+    .h2-title {
+        text-transform: uppercase;
+        font-size: clamp(2rem, 1.5455rem + 1.9394vw, 3rem);
+        line-height: 1.167;
+    }
+    .h4-title {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.25;
+    }
+    .section-two-item {
+        @apply flex mb-[72px] md:mb-[60px];
+    }
+    .item-desc {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.5;
+    }
+    .section-three__card {
+        color: rgba(0, 0, 0, 0.87);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-color: #fff;
+        border-radius: 4px;
+        /* card-style */
+        width: 100%;
+        display: flex;
+        z-index: 1;
+        max-width: 468px;
+        box-shadow: 0 2px 8px 0 rgba(25, 25, 25, 0.16);
+        padding-top: 32px;
+        padding-left: 32px;
+        margin-bottom: 32px;
+        padding-right: 32px;
+        flex-direction: column;
+        padding-bottom: 32px;
+        @apply lg:p-[56px] lg:mb-0 md:max-w-[468px] md:flex-col;
+    }
+    .ct-section-body {
+        @apply w-full relative md:mx-auto md:flex md:max-w-[960px] lg:max-w-[1200px];
+    }
+    .ct-line {
+        border: none;
+        height: 1px;
+        margin: 0;
+        flex-shrink: 0;
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+    .ct-p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    .ct-btnColorOdd {
+        background: linear-gradient(rgb(69, 221, 151), rgb(59, 200, 135));
+    }
+    .ct-btnColorEven {
+        background: linear-gradient(rgb(16, 183, 221), rgb(16, 169, 204));
+    }
+    .ct-btnAboutEF {
+        background: linear-gradient(to top, rgb(0, 18, 255) -100%, rgb(5, 230, 238) 100%);
+    }
+    .ct-btnSection {
+        @apply px-6 text-white h-14 md:h-12 text-base md:text-sm cursor-pointer font-semibold flex items-center rounded-full shadow-btn;
+    }
+
+    .ct-section5__title {
+        width: 100%;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+    }
+    .touch-ripple-root {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        overflow: hidden;
+        position: absolute;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+    .text-initial {
+        text-align: initial;
+    }
+    /* divider-desktop */
+    .divider-section5 {
+        display: none;
+    }
+    @media screen and (min-width: 1024px) {
+        .divider-section5 {
+            height: 120px;
+            display: flex;
+            align-self: center;
+            margin-left: 144px;
+            margin-right: 60px;
+        }
+    }
+    /* divider-mobile */
+    .mobile-divider1 {
+        height: 93px;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1024px) {
+        .mobile-divider1 {
+            display: none;
+        }
+    }
+    .divider-root {
+        @apply border-none h-px m-0 shrink bg-hr;
+    }
+    // quick check
+    .test-section {
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0),
+            rgba(128, 255, 190, 0.4) 17%,
+            rgb(18, 225, 166) 82%
+        );
+    }
+    .btn-start15,
+    .btn__start-TakeTest,
+    .btn__aboutEF {
+        min-width: 64px;
+        font-weight: 500;
+        line-height: 1.75;
+        border: none;
+        height: 56px;
+        display: flex;
+        font-size: 16px;
+        box-shadow: 0 2px 8px 0 rgba(25, 25, 25, 0.2);
+        margin-top: auto;
+        text-align: center;
+        border-radius: 9999px;
+        text-transform: none;
+        justify-content: center;
+        color: #fff;
+        width: 100%;
+        max-width: 270px;
+        align-self: center;
+        background: linear-gradient(rgb(69, 221, 151), rgb(59, 200, 135));
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    .btn__start-TakeTest {
+        background: linear-gradient(to bottom, #69aeff, #4999f8);
+    }
+    @media screen and (min-width: 768px) {
+        .btn-start15,
+        .btn__start-TakeTest,
+        .btn__aboutEF {
+            height: 48px;
+            font-size: 14px;
+            width: auto;
+            padding: 0 24px;
+            margin-right: auto;
+        }
+        .btn__start-TakeTest {
+            margin-right: unset;
+            margin-left: auto;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .btn-start15,
+        .btn__start-TakeTest {
+            width: auto;
+        }
+    }
+    .wrapper {
+        @apply w-full flex relative items-center flex-col;
+    }
+    .section-about {
+        @apply w-full relative md:mx-auto md:flex md:max-w-[960px] lg:max-w-[1200px];
+    }
+    .ct-paper {
+        color: rgba(0, 0, 0, 0.87);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-color: #fff;
+    }
+}

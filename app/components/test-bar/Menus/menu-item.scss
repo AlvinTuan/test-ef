@@ -1,0 +1,9 @@
+.ant-dropdown .ant-dropdown-menu {
+    padding: 20px 16px;
+    .ant-dropdown-menu-item {
+        font-size: 14px;
+        &:hover {
+            @apply text-focus_hover;
+        }
+    }
+}
