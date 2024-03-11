@@ -5,4 +5,12 @@ export type Criteria = {
     toLink?: string;
 };
 
+export type LinkItemFooter = {
+    linkHref: string;
+    linkLabel: string;
+};
 
+export type informationFooter = {
+    nameCol: string;
+    linkGroup: LinkItemFooter[];
+};

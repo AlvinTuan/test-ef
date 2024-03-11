@@ -14,7 +14,7 @@ export default function TakeTest() {
                     </div>
                     <div className='flex items-center justify-between mx-4 my-12'>
                         <div className='flex flex-col items-center'>
-                            <Image src='/reading.svg' alt='' width={60} height={60} />
+                            <Image src='/reading.svg' alt='' width={60} height={60} className='w-14 h-14 md:w-[60px] md:h-[60px]' />
                             <div className='mt-2 text-center'>
                                 <p className='text-base md:text-xl'>Reading</p>
                                 <p className='font-semibold'>7.5 mins</p>
